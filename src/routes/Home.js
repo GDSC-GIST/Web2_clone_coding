@@ -1,7 +1,9 @@
-import {dbService}  from "myBase";
+import {dbService, storgeService}  from "myBase";
 import { addDoc, collection,onSnapshot } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import Nweet from "components/Nweet";
+import {ref, uploadString,getDownloadURL} from "firebase/storage";
+import { v4 as uuidv4 } from "uuid";
 
 const Home = ({userObj}) =>{
 
@@ -20,12 +22,21 @@ const Home = ({userObj}) =>{
     },[]);
     const onSubmit = async (event) =>{
         event.preventDefault();
-        await addDoc(collection(dbService,"nweets"),{
+        let attachmentUrl="";
+        if(attachment!==""){
+            const attachmentRef = ref(storgeService, userObj.uid+'/'+uuidv4());
+            const response = await uploadString(attachmentRef,attachment,"data_url");
+            attachmentUrl = await getDownloadURL(response.ref);
+        }
+        const nweetObj={
             text : nweet ,
             createdAt: Date.now(),
             creatorId : userObj.uid,
-        });
+            attachmentUrl,
+        }
+        await addDoc(collection(dbService,"nweets"),nweetObj);
         setNweet("")
+        setAttachment("")
     };
     const onChange = (event) =>{
         const {target:{value}} = event;
@@ -44,7 +55,7 @@ const Home = ({userObj}) =>{
         reader.readAsDataURL(theFile);
 
     }
-    const onClearAttachment = () => setAttachment(null);
+    const onClearAttachment = () => setAttachment("");
     return(
         <div>
             <form onSubmit={onSubmit}>
@@ -54,7 +65,7 @@ const Home = ({userObj}) =>{
                     type="text" 
                     placeholder="what's on your mind?" 
                     maxLength={120}/>
-                <input type="file" accept="image/*" onChange={onFileChange} />
+                <input type="file" accept="image/*" onChange={onFileChange} alt="profile"/>
                 <input type="submit" value="Nweet"/>
                 {attachment &&(
                     <div>
