@@ -73,6 +73,8 @@ const onSubmit = async (event) => {
 
 ❓`promise` 를 리턴한다는 것은 날 좀 기다려달라는 의미로 await 를 해줘야함??
 
+<br/>
+
 ### Not really
 
 ⛳ (on Scrum) ❓ 2.4 `App.js` `useEffect` 안의 `onAuthStateChanged` 는 왜 user 값이 null 을 반환할 때, 즉 log in / sign in / log out 중 어떤 기능도 수행되지 않았을 때조차 실행되는가?
@@ -100,6 +102,8 @@ const onSubmit = async (event) => {
 ```
 
 이라고 치면 파일이 눈꼽만큼도 안보이는게 이해가 안가네
+
+<br/>
 
 ### Answered
 
