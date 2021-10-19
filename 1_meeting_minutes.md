@@ -8,10 +8,8 @@
     2. Review
         1. 김윤재
             1. Progress: ✅
-            2. Issue: 
         2. 강채율
             1. Progress: ✅
-            2. Issue:
         3. 조용환
             1. Progress: ✅
             2. Issue:
