@@ -54,17 +54,13 @@ const onSubmit = async (event) => {
 
 ## Questions
 
+### Important
+
 ❓ 2.4. Why setInterval() called twice at an interval ?
 
 ✋ 다음 [링크](https://stackoverflow.com/questions/69581697/setinterval-called-twice-at-an-interval-react-js)를 참고하자 \* Keyword : StrictMode, useEffect(), class based component
 
 ❓ 2.4 `App.js` 에서 `useEffect` 의 역할? 기능?
-
-⛳ (on Scrum) ❓ 2.4 `App.js` `useEffect` 안의 `onAuthStateChanged` 는 왜 user 값이 null 을 반환할 때, 즉 log in / sign in / log out 중 어떤 기능도 수행되지 않았을 때조차 실행되는가?
-
-⛳ (on Scrum) ❓ 2.4 What is the reason that `onAuthStateChanged`(in the `App.js` `useEffect`) runs even if when `user` value equals to `null`? I think `user` value equals to 'null' indicate that none of the tasks(log in / sign in / log out) were not perforemd, then I think that since `onAuthStateChanged` is a listener for login/ sign in/ log out, it should not be implemented but actually it runs even if so.
-
-❓ `<form>` 이랑 `<input type="submit">` 에 대해서 잘 알아보자
 
 ❓ 아래 코드 js ES6 잘 파악하자. 내 [블로그](https://y00njaekim.github.io/react/input/) 와 비교해보자.
 
@@ -75,11 +71,15 @@ const onSubmit = async (event) => {
     } = e;
 ```
 
-⛳ (on Scrum) ❓ 3.1 Home > `onSubmit()` 서브밋 할 때 clear 안되는데 원래 그런건가? 그렇다면 어떻게 클리어 하지?
+❓`promise` 를 리턴한다는 것은 날 좀 기다려달라는 의미로 await 를 해줘야함??
 
-⛳ (on Scrum) ❓ 3.1 about: Home > `onSubmit()`. When click submit, my <input> texts in a remain intact. Is this supposed to be like that? Or is it just for my case? What is the solution to clear that
+### Not really
 
-✋ value 값 설정해서 반영해주면 됨. `<input type="text" placeholder="Display name" onChange={onChange} value={newDisplayName}`
+⛳ (on Scrum) ❓ 2.4 `App.js` `useEffect` 안의 `onAuthStateChanged` 는 왜 user 값이 null 을 반환할 때, 즉 log in / sign in / log out 중 어떤 기능도 수행되지 않았을 때조차 실행되는가?
+
+⛳ (on Scrum) ❓ 2.4 What is the reason that `onAuthStateChanged`(in the `App.js` `useEffect`) runs even if when `user` value equals to `null`? I think `user` value equals to 'null' indicate that none of the tasks(log in / sign in / log out) were not perforemd, then I think that since `onAuthStateChanged` is a listener for login/ sign in/ log out, it should not be implemented but actually it runs even if so.
+
+❓ `<form>` 이랑 `<input type="submit">` 에 대해서 잘 알아보자
 
 ❓`setState((prev) => !prev)` 같이 인자로 함수 전달하는 경우 잘 살펴보자
 
@@ -101,7 +101,13 @@ const onSubmit = async (event) => {
 
 이라고 치면 파일이 눈꼽만큼도 안보이는게 이해가 안가네
 
-❓`promise` 를 리턴한다는 것은 날 좀 기다려달라는 의미로 await 를 해줘야함??
+### Answered
+
+⛳ (on Scrum) ❓ 3.1 Home > `onSubmit()` 서브밋 할 때 clear 안되는데 원래 그런건가? 그렇다면 어떻게 클리어 하지?
+
+⛳ (on Scrum) ❓ 3.1 about: Home > `onSubmit()`. When click submit, my <input> texts in a remain intact. Is this supposed to be like that? Or is it just for my case? What is the solution to clear that
+
+✋ value 값 설정해서 반영해주면 됨. `<input type="text" placeholder="Display name" onChange={onChange} value={newDisplayName}`
 
 <br/>
 
