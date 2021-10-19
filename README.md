@@ -60,7 +60,11 @@ const onSubmit = async (event) => {
 
 ✋ 다음 [링크](https://stackoverflow.com/questions/69581697/setinterval-called-twice-at-an-interval-react-js)를 참고하자 \* Keyword : StrictMode, useEffect(), class based component
 
+<br/>
+
 ❓ 2.4 `App.js` 에서 `useEffect` 의 역할? 기능?
+
+<br/>
 
 ❓ 아래 코드 js ES6 잘 파악하자. 내 [블로그](https://y00njaekim.github.io/react/input/) 와 비교해보자.
 
@@ -70,6 +74,8 @@ const onSubmit = async (event) => {
       target: {name, value},
     } = e;
 ```
+
+<br/>
 
 ❓`promise` 를 리턴한다는 것은 날 좀 기다려달라는 의미로 await 를 해줘야함??
 
@@ -81,9 +87,15 @@ const onSubmit = async (event) => {
 
 ⛳ (on Scrum) ❓ 2.4 What is the reason that `onAuthStateChanged`(in the `App.js` `useEffect`) runs even if when `user` value equals to `null`? I think `user` value equals to 'null' indicate that none of the tasks(log in / sign in / log out) were not perforemd, then I think that since `onAuthStateChanged` is a listener for login/ sign in/ log out, it should not be implemented but actually it runs even if so.
 
+<br/>
+
 ❓ `<form>` 이랑 `<input type="submit">` 에 대해서 잘 알아보자
 
+<br/>
+
 ❓`setState((prev) => !prev)` 같이 인자로 함수 전달하는 경우 잘 살펴보자
+
+<br/>
 
 ❓4.0 Home.js 에서
 
@@ -118,5 +130,7 @@ const onSubmit = async (event) => {
 ## To Do
 
 ❗ Auth, Routes, Init 등 `App.js` -> `Routers.js` -> ... 등으로 넘어가는 Flow 그리기 (state 상태와 조건문, `useEffect` 등을 적극적으로 고려하며 그리기)
+
+<br/>
 
 ❗ typescript, proptypes 사용하기
