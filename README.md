@@ -16,23 +16,29 @@
 
 <br/>
 
-로그인
+## Concept
 
-local 브라우져 닫혀도 기억
+> 로그인 상태 유지 관련
 
-session tap 떠 있는 동안 기억
+🚩 **local** : 브라우져 닫혀도 기억
 
-none 기억 x 새로고침 하면 바로 로그아웃 됨
+🚩 **session** : tap 떠 있는 동안 기억
+
+🚩 **none** : 기억 x 새로고침 하면 바로 로그아웃 됨
 
  <br/>
 
-npm install uui
+>  어떤 식별자를 랜덤으로 생성해주는 라이브러리
 
-어떤 식별자를 랜덤으로 생성해줌
+```shell
+npm install uui
+```
 
 <br/>
 
-userobj 라는 state 로 정보통일 이후 특정 component 에서 currentUser profile update 한 이후 상위 컴포넌트에서 받아온 refresh 함수 써서 userobj = currentuser 해주면 전부다 리렌더링
+> 재렌더링 한번에, 통일된 state 를 컴포넌트 곳곳에 박아놓고 나중에 수정될 시에 한번에 재렌더링
+
+`userobj` 라는 `state` 로 정보통일 이후 특정 component 에서 currentUser profile update 한 이후 상위 컴포넌트에서 받아온 `refresh()` 함수 써서 `userobj` = `currentuser` 해주면 전부다 리렌더링
 
 ```react
 const onSubmit = async (event) => {
@@ -43,6 +49,8 @@ const onSubmit = async (event) => {
     }
   };
 ```
+
+<br/>
 
 ## Questions
 
