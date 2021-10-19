@@ -81,7 +81,7 @@ const onSubmit = async (event) => {
 
 ✋ value 값 설정해서 반영해주면 됨. `<input type="text" placeholder="Display name" onChange={onChange} value={newDisplayName}`
 
-❓`setState((prev) => !prev) 같이 인자로 함수 전달하는 경우 잘 살펴보자
+❓`setState((prev) => !prev)` 같이 인자로 함수 전달하는 경우 잘 살펴보자
 
 ❓4.0 Home.js 에서
 
