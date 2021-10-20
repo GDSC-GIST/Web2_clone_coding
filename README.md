@@ -81,6 +81,8 @@ const onSubmit = async (event) => {
 
 ❓`promise` 를 리턴한다는 것은 날 좀 기다려달라는 의미로 await 를 해줘야함??
 
+✋ [다음 링크](https://y00njaekim.github.io/react/promise/) 를 참고하자
+
 <br/>
 
 ### Not really
