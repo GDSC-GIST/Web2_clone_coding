@@ -60,6 +60,8 @@ const onSubmit = async (event) => {
 
 ✋ 다음 [링크](https://stackoverflow.com/questions/69581697/setinterval-called-twice-at-an-interval-react-js)를 참고하자 \* Keyword : StrictMode, useEffect(), mount,  class based component
 
+✋ `useEffect` 에 관해서는 [다음 링크](https://react.vlpt.us/basic/16-useEffect.html) 를 참고하자
+
 <br/>
 
 ❓ 2.4 `App.js` 에서 `useEffect` 의 역할? 기능?
