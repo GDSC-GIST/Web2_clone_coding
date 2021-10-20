@@ -58,7 +58,7 @@ const onSubmit = async (event) => {
 
 ❓ 2.4. Why setInterval() called twice at an interval ?
 
-✋ 다음 [링크](https://stackoverflow.com/questions/69581697/setinterval-called-twice-at-an-interval-react-js)를 참고하자 \* Keyword : StrictMode, useEffect(), class based component
+✋ 다음 [링크](https://stackoverflow.com/questions/69581697/setinterval-called-twice-at-an-interval-react-js)를 참고하자 \* Keyword : StrictMode, useEffect(), mount,  class based component
 
 <br/>
 
