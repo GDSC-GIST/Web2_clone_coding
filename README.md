@@ -67,6 +67,7 @@ const onSubmit = async (event) => {
 ❓ 2.4 `App.js` 에서 `useEffect` 의 역할? 기능?
 
 ✋ [정리 완료!](https://y00njaekim.github.io/react/useEffect/)
+
 <br/>
 
 ❓ 아래 코드 js ES6 잘 파악하자. 내 [블로그](https://y00njaekim.github.io/react/input/) 와 비교해보자.
